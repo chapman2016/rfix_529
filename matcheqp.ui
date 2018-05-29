@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>matcheqp</class>
+ <widget class="QWidget" name="matcheqp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1006</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>选择装备</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="4" column="4">
+    <widget class="QPushButton" name="pb_next">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>46</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>选取并计算建议数量</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" rowspan="5" colspan="4">
+    <widget class="QTableWidget" name="tableWidget_result">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>200</height>
+      </size>
+     </property>
+     <column>
+      <property name="text">
+       <string>装备信息</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>建议数量</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="2" column="2" colspan="5">
+    <widget class="QTableWidget" name="tableWidget_2">
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>装备信息</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>启用</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>最大数量</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>任务列表</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>已选装备数量确认</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QTableWidget" name="tableWidget">
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>80</number>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>任务</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>任务量</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="8" column="6">
+    <widget class="QPushButton" name="pb_realnext">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>31</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>下一步</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0" colspan="7">
+    <widget class="QProgressBar" name="progressBar">
+     <property name="value">
+      <number>62</number>
+     </property>
+     <property name="textVisible">
+      <bool>false</bool>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="textDirection">
+      <enum>QProgressBar::TopToBottom</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="4">
+    <widget class="QLabel" name="label_shortest">
+     <property name="text">
+      <string>预计作业时间(小时)：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="6">
+    <widget class="QPushButton" name="pb_flush_time">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>31</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>刷新</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="5">
+    <widget class="QPushButton" name="pb_back">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>31</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>上一步</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="4">
+    <widget class="QPushButton" name="pb_conferm">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>46</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>确认数量</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="5">
+    <widget class="QDoubleSpinBox" name="doubleSpinBox_time">
+     <property name="maximum">
+      <double>99999999.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QLabel" name="label_stage">
+     <property name="font">
+      <font>
+       <family>Bernard MT Condensed</family>
+       <pointsize>26</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="label_3">
+     <property name="font">
+      <font>
+       <family>Adobe Gothic Std B</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>装备匹配--阶段</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

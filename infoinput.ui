@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>infoinput</class>
+ <widget class="QWidget" name="infoinput">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>646</width>
+    <height>464</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QTreeWidget" name="treeWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>171</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::MultiSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectColumns</enum>
+   </property>
+   <property name="allColumnsShowFocus">
+    <bool>false</bool>
+   </property>
+   <property name="headerHidden">
+    <bool>false</bool>
+   </property>
+   <column>
+    <property name="text">
+     <string>损坏类型</string>
+    </property>
+   </column>
+   <item>
+    <property name="text">
+     <string>道路</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>路面</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>隆起开裂</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>水毁</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>积雪</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>掩埋</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>路基</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>沉陷</string>
+      </property>
+     </item>
+    </item>
+   </item>
+   <item>
+    <property name="text">
+     <string>桥梁</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>挡防结构</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>倒塌</string>
+      </property>
+     </item>
+    </item>
+   </item>
+   <item>
+    <property name="text">
+     <string>隧道</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>洞口</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>坍塌</string>
+      </property>
+     </item>
+    </item>
+   </item>
+  </widget>
+  <widget class="QTreeWidget" name="treeWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>20</y>
+     <width>171</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::MultiSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectRows</enum>
+   </property>
+   <property name="allColumnsShowFocus">
+    <bool>false</bool>
+   </property>
+   <property name="headerHidden">
+    <bool>false</bool>
+   </property>
+   <column>
+    <property name="text">
+     <string>损坏类型</string>
+    </property>
+   </column>
+   <item>
+    <property name="text">
+     <string>道路</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>路面</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>隆起开裂</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>水毁</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>积雪</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>掩埋</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>路基</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>沉陷</string>
+      </property>
+     </item>
+    </item>
+   </item>
+   <item>
+    <property name="text">
+     <string>桥梁</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>挡防结构</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>倒塌</string>
+      </property>
+     </item>
+    </item>
+   </item>
+   <item>
+    <property name="text">
+     <string>隧道</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>洞口</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>坍塌</string>
+      </property>
+     </item>
+    </item>
+   </item>
+  </widget>
+  <widget class="QTreeWidget" name="treeWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>60</y>
+     <width>171</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::ContiguousSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectItems</enum>
+   </property>
+   <property name="allColumnsShowFocus">
+    <bool>false</bool>
+   </property>
+   <property name="headerHidden">
+    <bool>false</bool>
+   </property>
+   <column>
+    <property name="text">
+     <string>损坏类型</string>
+    </property>
+   </column>
+   <item>
+    <property name="text">
+     <string>道路</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>路面</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>隆起开裂</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>水毁</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>积雪</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>掩埋</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>路基</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>沉陷</string>
+      </property>
+     </item>
+    </item>
+   </item>
+   <item>
+    <property name="text">
+     <string>桥梁</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>挡防结构</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>倒塌</string>
+      </property>
+     </item>
+    </item>
+   </item>
+   <item>
+    <property name="text">
+     <string>隧道</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>洞口</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>坍塌</string>
+      </property>
+     </item>
+    </item>
+   </item>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

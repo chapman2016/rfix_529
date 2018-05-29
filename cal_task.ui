@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cal_task</class>
+ <widget class="QWidget" name="cal_task">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>847</width>
+    <height>756</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>各阶段任务量</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="0">
+    <widget class="QTableWidget" name="tableWidget">
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>80</number>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>任务</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>任务量</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>启用</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="5">
+    <widget class="QProgressBar" name="progressBar">
+     <property name="value">
+      <number>26</number>
+     </property>
+     <property name="textVisible">
+      <bool>false</bool>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="textDirection">
+      <enum>QProgressBar::TopToBottom</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>总任务量</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>阶段2</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>阶段3</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2" colspan="3">
+    <widget class="QTableWidget" name="tableWidget_3">
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>80</number>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>任务</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>任务量</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>启用</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="font">
+      <font>
+       <family>Adobe Gothic Std B</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>各阶段任务量：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>阶段4</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QTableWidget" name="tableWidget_2">
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>80</number>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>任务</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>任务量</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>启用</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="4" column="3" rowspan="2">
+    <widget class="QPushButton" name="pb_back">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>46</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>上一步</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4" rowspan="2">
+    <widget class="QPushButton" name="pb_next">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>46</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>下一步</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1" colspan="2">
+    <widget class="QTableWidget" name="tableWidget_4">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>80</number>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>新建行</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>任务</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>任务量</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>启用</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
