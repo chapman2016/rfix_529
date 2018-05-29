@@ -14,10 +14,41 @@
    <string>装备库</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="4" column="0">
-    <widget class="QLineEdit" name="lineEdit"/>
+   <item row="7" column="1">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>效率数值</string>
+     </property>
+    </widget>
    </item>
-   <item row="3" column="0" colspan="3">
+   <item row="8" column="1">
+    <widget class="QDoubleSpinBox" name="doubleSpinBox_eft">
+     <property name="maximum">
+      <double>999999.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>添加新装备信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLineEdit" name="le_name">
+     <property name="text">
+      <string>新装备名称_任务_特性_效率</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLineEdit" name="le_keyword"/>
+   </item>
+   <item row="6" column="0" colspan="9">
     <widget class="QTableWidget" name="tw">
      <column>
       <property name="text">
@@ -26,8 +57,11 @@
      </column>
     </widget>
    </item>
-   <item row="2" column="0">
+   <item row="4" column="3" colspan="4">
     <widget class="QComboBox" name="comboBox">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <item>
       <property name="text">
        <string>全部</string>
@@ -64,7 +98,7 @@
     </widget>
    </item>
    <item row="4" column="2">
-    <spacer name="horizontalSpacer">
+    <spacer name="horizontalSpacer_2">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
@@ -76,20 +110,7 @@
      </property>
     </spacer>
    </item>
-   <item row="1" column="0">
-    <widget class="QPushButton" name="pb_read">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>46</height>
-      </size>
-     </property>
-     <property name="text">
-      <string>读取</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="2">
+   <item row="8" column="2">
     <widget class="QPushButton" name="Pb_add_eqp">
      <property name="minimumSize">
       <size>
@@ -99,6 +120,19 @@
      </property>
      <property name="text">
       <string>添加</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="4">
+    <widget class="QPushButton" name="pb_read">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>46</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>刷新</string>
      </property>
     </widget>
    </item>

@@ -11,6 +11,8 @@ basicInfo::basicInfo(QWidget *parent) :
     ui(new Ui::basicInfo)
 {
     ui->setupUi(this);
+
+
     //初始化
     for(int i=0;i<32;i++){
         cb3[i]=cb2[i]=cb1[i]=NULL;

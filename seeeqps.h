@@ -19,6 +19,10 @@ private slots:
     void on_pb_read_clicked();
     void rcv_seeeqps();
 
+    void on_Pb_add_eqp_clicked();
+
+    void on_pb_search_clicked();
+
 private:
     Ui::seeeqps *ui;
 };

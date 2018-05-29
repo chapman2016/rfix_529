@@ -11,6 +11,8 @@
 #include "final.h"
 #include "editconfig.h"
 #include "seeeqps.h"
+#include "base.h"
+//#include "ui_base.h"
 #include <QStyleFactory>
 #include <QTextCodec>
 int main(int argc, char *argv[])
@@ -21,14 +23,20 @@ int main(int argc, char *argv[])
     //QTextCodec::setCodecForCStrings(codec);
 
     QApplication a(argc, argv);
+   // QWidget *ba=(QWidget*)new base;
+   // ba->show();
     MainWindow w;
     w.show();
     editconfig ec;
     //ec.show();
     QObject::connect(&w,SIGNAL(sg_config()),&ec,SLOT(rcv_show()));
     basicInfo bi;
+    //bi.setParent(ba);
+
+    //ba->setLayout(bi.layout());
     QObject::connect(&w,SIGNAL(sg_addCase()),&bi,SLOT(rcv_addcase()));
     dmgscale ds;
+    //ds.setParent(ba);
     QObject::connect(&bi,SIGNAL(sg_dmgscale()),&ds,SLOT(rcv_dmgcale()));
     QObject::connect(&ds,SIGNAL(sg_go_back()),&bi,SLOT(rcv_back_to_me()));
     //Form f;

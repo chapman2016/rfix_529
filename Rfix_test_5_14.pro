@@ -40,7 +40,8 @@ SOURCES += \
     final.cpp \
     editconfig.cpp \
     seeeqps.cpp \
-    color.cpp
+    color.cpp \
+    base.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -58,7 +59,8 @@ HEADERS += \
     final.h \
     editconfig.h \
     seeeqps.h \
-    color.h
+    color.h \
+    base.h
 
 FORMS += \
         mainwindow.ui \
@@ -73,4 +75,5 @@ FORMS += \
     final.ui \
     editconfig.ui \
     seeeqps.ui \
-    color.ui
+    color.ui \
+    base.ui

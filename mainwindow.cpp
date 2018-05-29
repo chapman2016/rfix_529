@@ -188,7 +188,7 @@ void MainWindow::updateconfig()
 
     }
 */
-    QFile file2("eqp.txt");
+    QFile file2("eqps.txt");
     if(!file2.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         qDebug()<<"Can't open the eqp file!"<<endl;
@@ -200,10 +200,11 @@ void MainWindow::updateconfig()
         str=QString(line);
         str=str.left(str.length()-1);//去除换行\n
         //qDebug()<<str;
-        eqps[eqpcnt++].name=str;
+        eqps[eqpcnt].efficiency=str.right(str.length()-str.indexOf("@")-1).toDouble();
+        eqps[eqpcnt++].name=str.left(str.indexOf("@"));
     }
     ///////////////////////
-    QFile file3("eqpeft.txt");
+   /* QFile file3("eqpeft.txt");
     if(!file3.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         qDebug()<<"Can't open the eqpeft file!"<<endl;
@@ -216,7 +217,7 @@ void MainWindow::updateconfig()
         str=str.left(str.length()-1);//去除换行\n
         //qDebug()<<str;
         eqps[eqpcnt2++].efficiency=str.toDouble();
-    }
+    }*/
 
 
 }
