@@ -20,124 +20,7 @@
    <string>事件基本信息录入</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>事件时间</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="2" colspan="3">
-    <widget class="QDateTimeEdit" name="dte_time"/>
-   </item>
-   <item row="1" column="0">
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>事件地点</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="2" colspan="5">
-    <widget class="QLineEdit" name="le_place"/>
-   </item>
-   <item row="2" column="0">
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>事件类型</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="2" colspan="3">
-    <widget class="QComboBox" name="cb_type"/>
-   </item>
-   <item row="3" column="0" rowspan="2" colspan="3">
-    <widget class="QLabel" name="label_4">
-     <property name="text">
-      <string>事件地理特征</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="2" colspan="5">
-    <widget class="QLineEdit" name="le_geos"/>
-   </item>
-   <item row="5" column="0" colspan="2">
-    <widget class="QLabel" name="label_5">
-     <property name="text">
-      <string>道路损毁类型</string>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="7">
-    <widget class="QLabel" name="label_8">
-     <property name="text">
-      <string>损毁类型</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="1" colspan="8">
-    <widget class="QScrollArea" name="scrollArea">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="verticalScrollBarPolicy">
-      <enum>Qt::ScrollBarAsNeeded</enum>
-     </property>
-     <property name="sizeAdjustPolicy">
-      <enum>QAbstractScrollArea::AdjustToContents</enum>
-     </property>
-     <property name="widgetResizable">
-      <bool>true</bool>
-     </property>
-     <widget class="QWidget" name="scrollAreaWidgetContents_2">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>525</width>
-        <height>1000</height>
-       </rect>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>1000</height>
-       </size>
-      </property>
-     </widget>
-    </widget>
-   </item>
-   <item row="7" column="4" colspan="2">
-    <widget class="QPushButton" name="pb_addRdDmgType">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>46</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>46</height>
-      </size>
-     </property>
-     <property name="text">
-      <string>添加道路损毁类型</string>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="6" colspan="2">
+   <item row="6" column="5">
     <widget class="QPushButton" name="pb_cancel">
      <property name="maximumSize">
       <size>
@@ -150,7 +33,57 @@
      </property>
     </widget>
    </item>
-   <item row="7" column="8">
+   <item row="5" column="2" colspan="4">
+    <widget class="QTextEdit" name="textEdit"/>
+   </item>
+   <item row="4" column="2" colspan="4">
+    <widget class="QLineEdit" name="le_geos"/>
+   </item>
+   <item row="1" column="2" colspan="4">
+    <widget class="QLineEdit" name="le_place"/>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>附加说明（选填）</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>事件时间</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2" colspan="2">
+    <widget class="QDateTimeEdit" name="dte_time"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>事件类型</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" rowspan="2" colspan="3">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>事件地理特征</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2" colspan="2">
+    <widget class="QComboBox" name="cb_type"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>事件地点</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="6">
     <widget class="QPushButton" name="pb_next">
      <property name="maximumSize">
       <size>
@@ -163,7 +96,7 @@
      </property>
     </widget>
    </item>
-   <item row="8" column="0" colspan="9">
+   <item row="7" column="0" colspan="7">
     <widget class="QProgressBar" name="progressBar">
      <property name="value">
       <number>2</number>
@@ -176,20 +109,6 @@
      </property>
      <property name="textDirection">
       <enum>QProgressBar::TopToBottom</enum>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="2">
-    <widget class="QLabel" name="label_6">
-     <property name="text">
-      <string>发生位置</string>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="4">
-    <widget class="QLabel" name="label_7">
-     <property name="text">
-      <string>损毁结构</string>
      </property>
     </widget>
    </item>

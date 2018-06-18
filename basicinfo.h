@@ -27,7 +27,7 @@ public:
 private slots:
     void rcv_addcase();
     void rcv_basicinfo();
-    void on_pb_addRdDmgType_clicked();
+    //void on_pb_addRdDmgType_clicked();
     void rcv_cbchange(int i);
     void rcv_back_to_me();
     //void rcv_setcb3(int i);

@@ -20,6 +20,11 @@ void color::on_pb_go_clicked()
     QColor textcolor=QColor(ui->le_text->text());
     QColor tipcolor=QColor(ui->le_tip->text());
     //QColor textcolor=QColor("#381F21");
+    //window->setAutoFillBackground(true);
+    QPixmap pixmap = QPixmap("base.jpg").scaled(this->size());
+    //    QPalette palette(this->palette());
+    //    palette.setBrush(QPalette::Background, QBrush(pixmap));
+     //   this->setPalette(palette);
 
     QPalette palette;
     palette.setColor(QPalette::Window, basiccolor);
@@ -30,6 +35,7 @@ void color::on_pb_go_clicked()
     palette.setColor(QPalette::ToolTipText, textcolor);
     palette.setColor(QPalette::Text, textcolor);
     palette.setColor(QPalette::Button, basiccolor);
+    //palette.
     palette.setColor(QPalette::ButtonText, textcolor);
     palette.setColor(QPalette::BrightText, Qt::red);
     palette.setColor(QPalette::Highlight, tipcolor.lighter());//142,45,197

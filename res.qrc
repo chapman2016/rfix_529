@@ -1,2 +1,6 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/">
+        <file>img/base.jpg</file>
+        <file>img/button.png</file>
+    </qresource>
+</RCC>

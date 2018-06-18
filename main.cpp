@@ -2,6 +2,7 @@
 #include <QApplication>
 #include "basicinfo.h"
 #include "dmgscale.h"
+#include "dmgscale2.h"
 #include "form.h"
 #include "infoinput.h"
 #include "cal_task.h"
@@ -12,9 +13,12 @@
 #include "editconfig.h"
 #include "seeeqps.h"
 #include "base.h"
+#include "database.h"
 //#include "ui_base.h"
+#include <QPluginLoader>
 #include <QStyleFactory>
 #include <QTextCodec>
+#include <QDir>
 int main(int argc, char *argv[])
 {
     QTextCodec *codec = QTextCodec::codecForName("UTF-8");//情况2
@@ -23,10 +27,20 @@ int main(int argc, char *argv[])
     //QTextCodec::setCodecForCStrings(codec);
 
     QApplication a(argc, argv);
-   // QWidget *ba=(QWidget*)new base;
-   // ba->show();
     MainWindow w;
     w.show();
+    //db
+    //QString strLibPath(QDir::toNativeSeparators(QApplication::applicationDirPath())+QDir::separator() + "plugins");
+    //a.addLibraryPath(strLibPath);
+    QPluginLoader loader;
+    loader.setFileName("qsqlmysql.dll");
+    //qDebug() << loader.load();
+    //qDebug() << loader.errorString();
+    database dbc;
+    qDebug()<<"login:"<<dbc.login("admin","123456");
+    dbc.readeqp();
+    dbc.addeqp("ad","hh",1,"asd","12","sad");
+    //
     editconfig ec;
     //ec.show();
     QObject::connect(&w,SIGNAL(sg_config()),&ec,SLOT(rcv_show()));
@@ -36,6 +50,8 @@ int main(int argc, char *argv[])
     //ba->setLayout(bi.layout());
     QObject::connect(&w,SIGNAL(sg_addCase()),&bi,SLOT(rcv_addcase()));
     dmgscale ds;
+    dmgscale2 ds2;
+    ds2.show();
     //ds.setParent(ba);
     QObject::connect(&bi,SIGNAL(sg_dmgscale()),&ds,SLOT(rcv_dmgcale()));
     QObject::connect(&ds,SIGNAL(sg_go_back()),&bi,SLOT(rcv_back_to_me()));

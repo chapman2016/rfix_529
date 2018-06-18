@@ -24,6 +24,8 @@
 #define MAX_TYPE 32
 #define MAX_TASK 16
 #define MAX_ELE 8
+#define IS_ADMIN 101
+#define IS_USER 100
 
 //extern rdcase *newcase;
 extern QString gl_sjtype[MAX_SJTYPE];//事件类型
@@ -38,6 +40,7 @@ extern QString gl_h_taskStage[32*16];//标记其使用阶段
 extern QString gl_needs[64];//装备能力需求标签 //“s2=多功能化”
 extern rdcase *newcase;
 extern eqp eqps[512];
+extern int usertype;
 //extern QSqlDatabase  *m_pDB;
 
 

@@ -36,7 +36,7 @@ void basicInfo::rcv_addcase()
     //
     clearcbs();
     //创建3个损毁下拉框 初始化第一个下拉框
-    on_pb_addRdDmgType_clicked();
+    //on_pb_addRdDmgType_clicked();
     //后面两个根据前面的current值生成
     //
     if(newcase!=NULL)
@@ -99,7 +99,7 @@ void basicInfo::rcv_cbchange(int i)
 
 
 }
-
+/*
 void basicInfo::on_pb_addRdDmgType_clicked()
 {
     int i=0;
@@ -158,7 +158,7 @@ void basicInfo::on_pb_addRdDmgType_clicked()
     //qDebug()<<cb2index[0];
     //qDebug()<<cb3index[0];
 }
-
+*/
 void basicInfo::closeEvent(QCloseEvent *event)
 {
     qDebug("basicinfo closed");
@@ -199,12 +199,13 @@ void basicInfo::on_pb_next_clicked()
     newcase->place=ui->le_place->text();
     newcase->sjtype=ui->cb_type->currentText();
     newcase->GEOs=ui->le_geos->text();
-    for(int i=0;i<32;i++){
+/*    for(int i=0;i<32;i++){
         if(cb1[i]==NULL)break;
         newcase->dmgSite[i]=cb1[i]->currentText();
         newcase->dmgStruct[i]=cb2[i]->currentText();
         newcase->dmgType[i]=cb1[i]->currentText();
     }
+*/
     this->hide();
     emit sg_dmgscale();
 }

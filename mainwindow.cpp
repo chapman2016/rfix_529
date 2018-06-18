@@ -15,6 +15,7 @@ QString gl_h_task[32*16];
 QString gl_h_taskStage[32*16];
 QString gl_needs[64];
 QSqlDatabase *m_pDB;
+int usertype;
 eqp eqps[512];
 
 
@@ -30,6 +31,12 @@ MainWindow::MainWindow(QWidget *parent) :
     co=new color;
     co->on_pb_go_clicked();
     delete co;
+    QPixmap pixmap = QPixmap("base.jpg").scaled(this->size());
+        QPalette palette(this->palette());
+        palette.setBrush(QPalette::Background, QBrush(pixmap));
+        this->setPalette(palette);
+        //setWindowOpacity(0.7);
+    usertype=IS_USER;
     updateconfig();
 
 }

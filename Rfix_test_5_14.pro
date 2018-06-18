@@ -41,7 +41,9 @@ SOURCES += \
     editconfig.cpp \
     seeeqps.cpp \
     color.cpp \
-    base.cpp
+    base.cpp \
+    database.cpp \
+    dmgscale2.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -60,7 +62,9 @@ HEADERS += \
     editconfig.h \
     seeeqps.h \
     color.h \
-    base.h
+    base.h \
+    database.h \
+    dmgscale2.h
 
 FORMS += \
         mainwindow.ui \
@@ -76,4 +80,12 @@ FORMS += \
     editconfig.ui \
     seeeqps.ui \
     color.ui \
-    base.ui
+    base.ui \
+    dmgscale2.ui
+
+DISTFILES += \
+    img/button.png \
+    img/base.jpg
+
+RESOURCES += \
+    res.qrc
