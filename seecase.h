@@ -22,9 +22,9 @@ public:
     ~seeCase();
 
 private slots:
-    void rcv_seecase();
+    void rcv_seecase(QString name);
 
-    void on_pb_read_clicked();
+    void on_pb_read_clicked(QString name);
 
 private:
     Ui::seeCase *ui;

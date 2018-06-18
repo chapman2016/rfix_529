@@ -37,7 +37,7 @@ signals:
 private slots:
     void on_pb_next_clicked();
     void rcv_matcheqp();
-
+    void rcv_matcheqp1();
     void on_pb_conferm_clicked();
 
     void on_pb_realnext_clicked();

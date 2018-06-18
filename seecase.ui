@@ -17,19 +17,6 @@
    <item row="0" column="0">
     <widget class="QTextBrowser" name="textBrowser"/>
    </item>
-   <item row="1" column="0">
-    <widget class="QPushButton" name="pb_read">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>46</height>
-      </size>
-     </property>
-     <property name="text">
-      <string>读取</string>
-     </property>
-    </widget>
-   </item>
   </layout>
  </widget>
  <resources/>

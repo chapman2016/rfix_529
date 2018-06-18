@@ -31,6 +31,14 @@ private slots:
     void on_pb_add_3_clicked();
 
     void add_to_list(int i);
+    void on_listWidget_itemClicked(QListWidgetItem *item);
+
+    void on_listWidget_itemDoubleClicked(QListWidgetItem *item);
+
+    void on_listWidget_2_itemDoubleClicked(QListWidgetItem *item);
+
+    void on_listWidget_3_itemDoubleClicked(QListWidgetItem *item);
+
 private:
     Ui::needs *ui;
 };

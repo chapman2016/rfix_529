@@ -27,6 +27,10 @@ public:
 private slots:
     void on_pb_save_clicked();
     void rcv_final();
+    void on_pb_back_clicked();
+signals:
+    void sg_matcheqp1();
+    void see_case(QString);
 private:
     Ui::final *ui;
 

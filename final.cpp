@@ -204,5 +204,12 @@ void final::on_pb_save_clicked()
     in<<outstring;
     file.close();
     qDebug()<<outstring;
+    see_case(name);
+    this->hide();
+}
+
+void final::on_pb_back_clicked()
+{
+    emit sg_matcheqp1();
     this->hide();
 }

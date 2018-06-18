@@ -43,7 +43,9 @@ SOURCES += \
     color.cpp \
     base.cpp \
     database.cpp \
-    dmgscale2.cpp
+    dmgscale2.cpp \
+    caselist.cpp \
+    login.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -64,7 +66,9 @@ HEADERS += \
     color.h \
     base.h \
     database.h \
-    dmgscale2.h
+    dmgscale2.h \
+    caselist.h \
+    login.h
 
 FORMS += \
         mainwindow.ui \
@@ -81,7 +85,9 @@ FORMS += \
     seeeqps.ui \
     color.ui \
     base.ui \
-    dmgscale2.ui
+    dmgscale2.ui \
+    caselist.ui \
+    login.ui
 
 DISTFILES += \
     img/button.png \

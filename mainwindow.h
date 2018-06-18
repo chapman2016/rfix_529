@@ -31,8 +31,9 @@ private slots:
 signals:
     void sg_addCase();
     void sg_config();
-    void sg_seecase();
+   // void sg_seecase();
     void sg_seeeqps();
+    void sg_caselist();
 
 private:
     Ui::MainWindow *ui;

@@ -87,3 +87,30 @@ void needs::add_to_list(int i)
     lw->addItem(cb->currentText());
 
 }
+
+void needs::on_listWidget_itemClicked(QListWidgetItem *item)
+{
+    qDebug()<<"clicked"<<item->text();
+
+}
+
+void needs::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
+{
+    QListWidget* lw=dynamic_cast<QListWidget*>(sender());
+    lw->removeItemWidget(item);
+    delete item;
+}
+
+void needs::on_listWidget_2_itemDoubleClicked(QListWidgetItem *item)
+{
+    QListWidget* lw=dynamic_cast<QListWidget*>(sender());
+    lw->removeItemWidget(item);
+    delete item;
+}
+
+void needs::on_listWidget_3_itemDoubleClicked(QListWidgetItem *item)
+{
+    QListWidget* lw=dynamic_cast<QListWidget*>(sender());
+    lw->removeItemWidget(item);
+    delete item;
+}

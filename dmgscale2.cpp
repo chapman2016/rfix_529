@@ -13,7 +13,7 @@
 
 QListWidget *listwgt=NULL;
 QTableWidget *tbs[32];
-int tbCNT=1;
+int tbCNT=0;
 dmgscale2::dmgscale2(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::dmgscale2)
@@ -22,11 +22,14 @@ dmgscale2::dmgscale2(QWidget *parent) :
     listwgt=ui->listWidget;
     QTableWidget*tb=new QTableWidget(0,6);
     tb->setHorizontalHeaderLabels(QStringList() <<tr("损毁位置")<<tr("损毁结构")<<tr("类型")<<tr("计算要素")<<tr("数值")<<tr("删除"));
+    tb->setColumnWidth(4,99);
     QListWidgetItem *item = new QListWidgetItem;
     QSize size = item->sizeHint();
     item->setSizeHint(QSize(size.width(),30));
-    listwgt->addItem(item);
-    listwgt->setItemWidget(item,tb);
+    //listwgt->addItem(item);
+    //listwgt->setItemWidget(item,tb);
+
+
 }
 
 dmgscale2::~dmgscale2()
@@ -69,6 +72,8 @@ void dmgscale2::on_pb_add_clicked()
    QObject::connect(msite,SIGNAL(currentIndexChanged(int)),this,SLOT(on_update_cb_index()));
    QObject::connect(mstructs,SIGNAL(currentIndexChanged(int)),this,SLOT(on_update_cb_index()));
    QObject::connect(mtype,SIGNAL(currentIndexChanged(int)),this,SLOT(on_update_cb_index()));
+   cb_insert_data_values(msite->currentIndex(),mstructs->currentIndex(),mtype->currentIndex(),
+                         item,tbs[tbCNT]);
    qDebug()<<"pb parent:"<<pb->parentWidget();
    qDebug()<<"cb parent:"<<msite->parentWidget();
    tbCNT++;
@@ -81,7 +86,7 @@ void dmgscale2::on_update_cb_index()
     QTableWidget *tw;
     //cb->setText("del");
     QListWidgetItem *item;
-    for(int i=1;i<=tbCNT;i++)
+    for(int i=0;i<=tbCNT;i++)
     {
         item=listwgt->item(i);
         QWidget *w=listwgt->itemWidget(item);
@@ -127,6 +132,8 @@ void dmgscale2::on_update_cb_index()
     case 3:
     {
         qDebug()<<"cb3";
+        cb_insert_data_values(c1->currentIndex(),c2->currentIndex(),c3->currentIndex(),
+                              item,tw);
         break;
     }
     default:
@@ -134,6 +141,40 @@ void dmgscale2::on_update_cb_index()
     }
 
 }
+//on_cb_changed3生成后面
+void dmgscale2::cb_insert_data_values(int i1,int i2,int i3,QListWidgetItem *item,QTableWidget *tw)
+{
+    //tw->removeColumn(3);
+    int old=0;
+    QWidget *w1,*w2;
+    for(;;old++){
+        w1=tw->cellWidget(old,3);
+        w2=tw->cellWidget(old,4);
+        if(NULL==w1||NULL==w2)break;
+        tw->removeCellWidget(old,3);
+        tw->removeCellWidget(old,4);
+    }
+    //tw->removeColumn(4);
+    QLabel* ele[32];
+    QDoubleSpinBox *eleV[32];
+    int i4=0;
+    for( i4=0;i4<MAX_ELE&&!gl_ele[i1][i2][i3][i4].isEmpty();i4++)
+    {
+        ele[i4]=new QLabel;
+        eleV[i4]=new QDoubleSpinBox;
+        eleV[i4]->setMaximum(DBL_MAX);
+        eleV[i4]->setValue(1.0);
+        ele[i4]->setText(gl_ele[i1][i2][i3][i4]);
+        tw->setCellWidget(i4,3,ele[i4]);
+        tw->setCellWidget(i4,4,eleV[i4]);
+     }
+    tw->resizeColumnsToContents();
+    //qDebug()<<"spbox width"<<eleV[0]->width();
+    QSize size = item->sizeHint();
+    item->setSizeHint(QSize(size.width(),30*i4+25));
+
+}
+//on_cb_changed1,2
 void dmgscale2::cb_insert_data_one(QComboBox*cb,int x,int ii1,int ii2,int ii3){
     //初始化下拉框
     /////////////////
@@ -195,7 +236,7 @@ void dmgscale2::on_pb_del_clicked()
     QTableWidget *tw;
     pb->setText("del");
     QListWidgetItem *item;
-    for(int i=1;i<=tbCNT;i++)
+    for(int i=0;i<=tbCNT;i++)
     {
         item=listwgt->item(i);
         QWidget *w=listwgt->itemWidget(item);
@@ -216,9 +257,71 @@ void dmgscale2::on_pb_del_clicked()
     delete item;
     qDebug()<<"row:"<<listwgt->count();
     tbCNT--;
-    //if(NULL!=tbs[0])
-    //tbs[0]->horizontalHeader()->setVisible(true);
+    QTableWidget *tw0;
+    QWidget *w=listwgt->itemWidget(listwgt->item(0));
+    tw0=(QTableWidget*)w;
+    if(NULL!=tw0)
+        tw0->horizontalHeader()->setVisible(true);
 
     //QSize size = item->sizeHint();
     //item->setSizeHint(QSize(size.width(),30*4));
+}
+
+void dmgscale2::on_pb_next_clicked()
+{
+    //save
+    int x=0;
+    QTableWidget *tw;
+    for(;;x++)
+    {
+        QWidget *w=listwgt->itemWidget(listwgt->item(x));
+        tw=(QTableWidget*)w;
+        if(NULL==tw)break;
+        QComboBox *msite=(QComboBox *)tw->cellWidget(0,0);
+        QComboBox *mstructs=(QComboBox *)tw->cellWidget(0,1);
+        QComboBox *mtype=(QComboBox *)tw->cellWidget(0,2);
+        newcase->dmgSite[x]=msite->currentText();
+        newcase->dmgStruct[x]=mstructs->currentText();
+        newcase->dmgType[x]=mtype->currentText();
+        qDebug()<<newcase->dmgType[x];
+        QLabel* ele[32];
+        QDoubleSpinBox *eleV[32];
+        //QPushButton *pb=new QPushButton;
+        int old=0;
+        QWidget *w1,*w2;
+        for(;;old++){
+            w1=tw->cellWidget(old,3);
+            w2=tw->cellWidget(old,4);
+            if(NULL==w1||NULL==w2)break;
+            ele[old]=(QLabel*)tw->cellWidget(old,3);
+            eleV[old]=(QDoubleSpinBox*)tw->cellWidget(old,4);
+            newcase->dmgEleName[x][old]=ele[old]->text();
+            newcase->dmgEle[x][old]=eleV[old]->value();
+            qDebug()<< newcase->dmgEle[x][old];
+        }
+
+    }
+    this->hide();
+    emit sg_cal_task();
+
+}
+void dmgscale2::rcv_back_to_me()
+{
+    this->show();
+}
+void dmgscale2::rcv_dmgscale()
+{
+    //clear contents?
+    QTableWidget *tw0;
+    QWidget *w=listwgt->itemWidget(listwgt->item(0));
+    tw0=(QTableWidget*)w;
+    if(NULL==tw0)
+        on_pb_add_clicked();
+    this->show();
+}
+void dmgscale2::on_pb_back_clicked()
+{
+    //保存？
+    this->hide();
+    emit sg_go_back();
 }

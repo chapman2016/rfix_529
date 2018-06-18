@@ -19,16 +19,15 @@ seeCase::~seeCase()
 }
 
 
-void seeCase::rcv_seecase(){
+void seeCase::rcv_seecase(QString name){
     this->show();
+    on_pb_read_clicked(name);
 }
 
-void seeCase::on_pb_read_clicked()
+void seeCase::on_pb_read_clicked(QString name)
 {
-    bool ok=QDesktopServices::openUrl(QUrl::fromLocalFile("./case/"));
-    if(!ok){QMessageBox::warning(this,"sdf","can't open file,no case saved yet?",QMessageBox::Yes);}
-    return;
-    QFile f("SavedCases.txt");
+
+    QFile f(name);
     if(!f.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         QMessageBox::warning(this,"sdf","can't open file,no case saved?",QMessageBox::Yes);

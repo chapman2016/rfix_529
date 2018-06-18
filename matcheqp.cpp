@@ -619,3 +619,8 @@ void matcheqp::cal_ataskV()
         }
     }
 }
+void matcheqp::rcv_matcheqp1()
+{
+    this->show();
+
+}

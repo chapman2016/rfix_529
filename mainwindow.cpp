@@ -1,6 +1,6 @@
 ﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include <QMessageBox>
 #include <QFile>
 #include <QDebug>
 
@@ -18,7 +18,7 @@ QSqlDatabase *m_pDB;
 int usertype;
 eqp eqps[512];
 
-
+bool first=true;
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -27,10 +27,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     //on_pushButton_clicked();//skin
-    color *co;
-    co=new color;
-    co->on_pb_go_clicked();
-    delete co;
+
     QPixmap pixmap = QPixmap("base.jpg").scaled(this->size());
         QPalette palette(this->palette());
         palette.setBrush(QPalette::Background, QBrush(pixmap));
@@ -47,12 +44,20 @@ MainWindow::~MainWindow()
 }
 void MainWindow::rcv_mainwindow()
 {
+    if(first)
+    {   color *co;
+        co=new color;
+        co->on_pb_go_clicked();
+        delete co;
+        first=false;
+    }
     this->show();
 }
 void MainWindow::on_pb_create_newcase_clicked()
 {
     //添加事件
     emit sg_addCase();
+
 }
 void MainWindow::updateconfig()
 {
@@ -251,7 +256,8 @@ void MainWindow::on_pb_conf_clicked()
 
 void MainWindow::on_pb_see_saved_clicked()
 {
-    emit sg_seecase();
+    //emit sg_seecase();
+    emit sg_caselist();
 }
 
 void MainWindow::on_pb_see_eqps_clicked()
